@@ -1,8 +1,7 @@
-import express from "express";
+import "dotenv/config";
+import app from "./src/app.js";
 
 const PORT = 3000;
-
-const app = express();
 
 app.listen(PORT, ()=> {
   console.log("Servidor ok!");
