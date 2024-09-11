@@ -3,7 +3,7 @@ import projetos from "../Models/Projetos.js";
 class ProjetosController {
   static async listarProjetos(req, res) {
     try{
-      const listaDeProjetos = await projetos.find({});
+      const listaDeProjetos = await projetos.find({}).sort({data: -1});
       res.status(200).json({"Posts":listaDeProjetos});
     }catch(erro){
       res.status(500).send(`Erro ao buscar projetos: ${erro}`);
